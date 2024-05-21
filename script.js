@@ -11,6 +11,13 @@ document.getElementById("prevButton").onclick = function() {
     currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
     showImage(currentIndex);
 };
+document.getElementById("loginButton").onclick = function() {
+    alert("Login button clicked!");
+};
+
+document.getElementById("signupButton").onclick = function() {
+    alert("Sign Up button clicked!");
+};
 
 document.getElementById("nextButton").onclick = function() {
     currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
