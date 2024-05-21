@@ -6,6 +6,15 @@ function showImage(index) {
     var carouselImage = document.getElementById("carouselImage");
     carouselImage.src = images[index];
 }
+document.getElementById("signupForm").onsubmit = function(event) {
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
+    
+    if (password !== confirmPassword) {
+        alert("Passwords do not match. Please try again.");
+        event.preventDefault(); // Prevent form submission
+    }
+};
 
 document.getElementById("prevButton").onclick = function() {
     currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
